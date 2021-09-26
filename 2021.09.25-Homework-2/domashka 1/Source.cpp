@@ -6,10 +6,11 @@ int main(int argc, char* argv[])
 {
 	setlocale(LC_ALL, "Russian");
 	int n = 0;
+	int banana;
 	cin >> n;
 	if (n < 1000)
 	{
-		cout << "n == ? banana";
+		cout << "n == banana";
 	}
 	else
 	{

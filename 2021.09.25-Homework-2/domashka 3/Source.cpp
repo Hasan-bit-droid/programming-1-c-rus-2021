@@ -18,6 +18,5 @@ int main()
     {
         cout << (k * 2 * m) * n / k; // иначе жарим n/k раз
     }
-
     return 0;
 }
