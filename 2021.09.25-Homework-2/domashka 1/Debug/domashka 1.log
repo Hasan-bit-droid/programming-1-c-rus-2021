@@ -1,0 +1,4 @@
+﻿  Source.cpp
+E:\programming-1-c-rus-2021\2021.09.25-Homework-2\domashka 1\Source.cpp(20,21): warning C4060: оператор switch не содержит метку "case" или "default"
+E:\programming-1-c-rus-2021\2021.09.25-Homework-2\domashka 1\Source.cpp(9,6): warning C4101: banana: неиспользованная локальная переменная
+  domashka 1.vcxproj -> E:\programming-1-c-rus-2021\2021.09.25-Homework-2\Debug\domashka 1.exe
