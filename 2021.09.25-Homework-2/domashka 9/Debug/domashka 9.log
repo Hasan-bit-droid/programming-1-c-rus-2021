@@ -1,6 +1,0 @@
-﻿  Source.cpp
-E:\programming-1-c-rus-2021\2021.09.25-Homework-2\domashka 9\Source.cpp(10,8): warning C4804: <=: небезопасное использование типа "bool" в операции
-E:\programming-1-c-rus-2021\2021.09.25-Homework-2\domashka 9\Source.cpp(10,13): warning C4804: <=: небезопасное использование типа "bool" в операции
-E:\programming-1-c-rus-2021\2021.09.25-Homework-2\domashka 9\Source.cpp(10,30): warning C4804: <=: небезопасное использование типа "bool" в операции
-E:\programming-1-c-rus-2021\2021.09.25-Homework-2\domashka 9\Source.cpp(10,35): warning C4804: <=: небезопасное использование типа "bool" в операции
-  domashka 9.vcxproj -> E:\programming-1-c-rus-2021\2021.09.25-Homework-2\Debug\domashka 9.exe
