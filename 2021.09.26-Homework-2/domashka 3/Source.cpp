@@ -19,5 +19,4 @@ int main()
          cout << (k * 2 * m) * n / k;
      }
      return 0;
-       
 }

@@ -1,18 +1,12 @@
-#include <iostream>
+#include<iostream>
 
 using namespace std;
 
-int main()
+int main(int argc, char* argv)
 {
 	int x = 0;
-
+	cin >> x;
 	int x2 = x * x;
-	
-	int res = x2 * (x2 + 2 + 1) + x + 1;
-	
-	cin >> x ;
-	
-	cout << res;
-	
-	return 0;
+	cout << (x2 + x + 1) * x2 + x + 1;
+	return EXIT_SUCCESS;
 }

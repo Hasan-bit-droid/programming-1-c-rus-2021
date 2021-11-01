@@ -1,19 +1,16 @@
-#include <iostream>
+#include<iostream>
 
 using namespace std;
 
 int main(int argc, char* argv[])
 {
-	int n = 1;
-	int f = 1;
-	cout << "N: ";
+	int n = 0;
 	cin >> n;
-
-	for (int i = 1; i <= n; i++)
+	int fact = 1;
+	for (int i = 2; i <= n; ++i)
 	{
-		f = f * i;
-		cout << "Fact=" << f << endl;
+		fact *= i;
 	}
-	
+	cout << fact;
 	return EXIT_SUCCESS;
 }
