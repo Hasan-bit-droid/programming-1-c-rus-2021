@@ -4,20 +4,23 @@ using namespace std;
 
 int main(int argc, char* argv[])
 {
-	int k = 0;
-	int n = 0;
-	int m = 0;
-	int d = 0;
-	cin >> k;
-	if (0 <= n <= 10000 & 0 <= m <= 10000 & 1 <= k <= 10000)
-	{
-		for (int i = 1; i <= k; ++i)
-		{
-			cin >> n >> m;
-			d = 19 * m + (n + 239) * (n + 366) / 2;
-			cout << d;
-		}
-	}
+	int arr[10000] = { 0 };
+	int max =arr[ 0 ];
+	int min =arr[ 0 ];
 	
+	for (int i = 0; i < 10000; ++i)
+	{
+		if (max < arr[i])
+		{
+			max = arr[i];
+		}
+		cout << max << endl;
+		if (min > arr[i])
+		{
+			min = arr[i];
+		}
+		cout << min << endl;
+	}
+	cout << max + min << endl;
 	return EXIT_SUCCESS;
 }
