@@ -1,15 +1,27 @@
 #include <iostream>
-#include "Header.h"
+#include "ArrayList.h"
 
-int main() {
-	BigInteger Z("100000000000007689970000");
-	BigInteger F(9000);
-	BigInteger D;
-	D = Z + F;
+using namespace std;
+int main()
+{
+    int* tmp = new int[2];
+    tmp[0] = 2;
+    tmp[1] = -1;
+    IntArray arr1(tmp, 2, 2), arr2;
+    delete[] tmp;
+    tmp = nullptr;
 
-	//D = Z / F;
+    for (int i = 0; i < 3; ++i)
+    {
+        arr2 += i;
+    }
 
-	std::cout << "Z * F = " << D << std::endl;
-    
-	return 0;
+    cout << arr1 + arr2 << endl;
+
+    IntArray arrClone(arr1);
+    arrClone = arr2;
+    if (arrClone == arr2)
+    {
+        cout << arrClone << endl;
+    }
 }
