@@ -3,8 +3,38 @@
 using namespace std;
 
 
+Matrix::Matrix(double** data, int count)
+{
+    double** data = new double* [n];
+    for (int i = 0; i < n; ++i)
+        data[i] = new double[n];
+    n = count;
+}
 
-    //Заполнение матрицы
+Matrix::Matrix()
+{
+    n = 4;   
+    double** data = new double* [n];
+    for (int i = 0; i < n; i++)
+        data[i] = new double[n];
+
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            data[i][j] = 0;
+        }
+    }
+    cout << this << endl;
+}
+
+Matrix::~Matrix()
+{
+    for (int i = 0; i < n; ++i)
+    {
+        delete[] data[i];
+    }
+    delete[] data;
+}
+
     void Matrix:: setMatrix()
     {
         for (int i = 0; i < n; i++) 
@@ -16,7 +46,6 @@ using namespace std;
         }
     }
 
-    //Вывод матрицы
     void Matrix:: getMatrix()
     {
         for (int i = 0; i < n; i++) 
@@ -30,7 +59,7 @@ using namespace std;
     }
 
 
-    Matrix:: Matrix(const Matrix& ob)
+    Matrix::Matrix(const Matrix& ob)
     {
         cout << "\nКопирующий конструктор\n";
         n = ob.n;
@@ -43,34 +72,29 @@ using namespace std;
         {
             for (int j = 0; j < n; ++j)
             {
-                data[ i ][ j ] = ob.data[ i ][ j ];
+                data[i][j] = ob.data[i][j];
             }
         }
     }
 
-    //Перегрузка оператора присваивания
     Matrix&Matrix::operator=(const Matrix& ob)
     {
         if (n != ob.n)
         {
-            // освобождение памяти в левом операнде
             for (int i = 0; i < n; i++)
                 delete[] data[i];
             delete[] data;
-            // выделение памяти в левом операнде
             n = ob.n;
             double** data = new double* [n];
             for (int i = 0; i < n; i++)
                 data[i] = new double[n];
-        }
-        //Копирование данных правого операнда в левый
+        }  
         for (int i = 0; i < n; i++)
             for (int j = 0; j < n; j++)
                 data[ i ][ j ] = ob.data[ i ][ j ];
         return *this;
     }
 
-    //Перегрузка оператора вычитания
     Matrix Matrix::operator-(const Matrix& ob)
     {
         for (int i = 0; i < n; i++) 
@@ -83,25 +107,7 @@ using namespace std;
         return *this;
     }
 
-    //Перегрузка оператора вычитания
-    Matrix operator-(Matrix& left, Matrix& right)
-    {
-        if (left.n != right.n)
-            cout << "\nМатричные размеры не совпадают\n";
-
-        Matrix Matrix:: result();
-        {
-            for (int i = 0; i < left.n; i++)
-            {
-                for (int j = 0; j < left.n; j++)
-                    result.data[i][j] = left.data[i][j] - right.data[i][j];
-            }
-        }
-        return result;
-    }
-
-
-    //Перегрузка оператора смены знака
+ 
     Matrix Matrix::operator-() const
     {
         for (int i = 0; i < n; i++) 
